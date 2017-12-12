@@ -478,7 +478,7 @@ class Excel2007 {
             return is_numeric($value) ? (float)$value : $value;
         }
 
-        $format = $this->parsedFormats[$index] ?? [];
+        $format = empty($this->parsedFormats[$index]) ? [] : $this->parsedFormats[$index];
 
         if (empty($format)) {
             $format = [

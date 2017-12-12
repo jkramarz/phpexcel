@@ -1,7 +1,7 @@
 {
-    "name": "ecweb/phpexcel",
+    "name": "jkramarz/phpexcel",
     "description": "A lightweight PHP library for reading spreadsheet files",
-    "homepage": "https://github.com/ec-web/phpexcel",
+    "homepage": "https://github.com/jkramarz/phpexcel",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "php": ">=7.0"
+        "php": ">=5.6"
     },
     "minimum-stability": "stable",
     "autoload": {

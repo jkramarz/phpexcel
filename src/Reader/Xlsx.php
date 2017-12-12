@@ -53,8 +53,8 @@ class Xlsx extends BaseReader {
         if ($this->count === null) {
             $row = $column = 0;
             if ($sheet = $this->sheets($this->parser->getSheetIndex())) {
-                $row = $sheet['totalRows'] ?? 0;
-                $column = $sheet['totalColumns'] ?? 0;
+                $row = empty($sheet['totalRows'] ) ? 0 : $sheet['totalRows'];
+                $column = empty($sheet['totalColumns']) ? 0 : $sheet['totalColumns'];
             }
 
             $this->count = [
@@ -76,7 +76,7 @@ class Xlsx extends BaseReader {
         $sheets = $this->parser->parseWorksheetInfo();
 
         if ($index !== null) {
-            return $sheets[$index] ?? [];
+            return empty($sheets[$index] ) ? [] : $sheets[$index];
         }
 
         return $sheets;

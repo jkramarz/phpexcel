@@ -5,7 +5,7 @@ A lightweight PHP library for reading spreadsheet files
 
 ### Requirements
 
-  - PHP 7.0 or higher
+  - PHP 5.6 or higher
 
 ### Installation
 
@@ -16,7 +16,7 @@ A lightweight PHP library for reading spreadsheet files
 ### csv
 
 ```
-// Simple setting 
+// Simple setting
 $reader = EC\PHPExcel\Excel::load('files/02.csv', 'GBK');
 
 // Flexible setting
@@ -37,7 +37,7 @@ $reader = EC\PHPExcel\Excel::load('files/01.csv', function(EC\PHPExcel\Reader\Cs
     $reader->setDelimiter("\t");
 }, 'GBK');
 
-// skip to row 50 
+// skip to row 50
 $reader->seek(50);
 
 // Get the current row data
@@ -64,7 +64,7 @@ $reader = EC\PHPExcel\Excel::load('files/01.xls', function(EC\PHPExcel\Reader\Xl
     $reader->setSheetIndex(1);
 });
 
-// skip to row 50 
+// skip to row 50
 $reader->seek(50);
 
 // Get the current row data
@@ -93,7 +93,7 @@ $reader = EC\PHPExcel\Excel::load('files/01.xlsx', function(EC\PHPExcel\Reader\X
     $reader->setSheetIndex(0);
 });
 
-// skip to row 50 
+// skip to row 50
 $reader->seek(50);
 
 // Get the current row data
